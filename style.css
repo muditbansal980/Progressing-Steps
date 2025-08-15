@@ -1,0 +1,73 @@
+* {
+    margin: 0px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f6f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    min-width: 50px;
+    min-height: 20px;
+    margin: auto auto;
+}
+button{
+    cursor: pointer;
+}
+.circles {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.circle {
+    border:3px solid #e0e0e0;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #999;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: border-color 0.4s ease;
+}
+.circle:first-child{
+    border:3px solid #3f5fdf;
+}
+
+button {
+    border-radius: 6px;
+    padding: 8px 30px;
+}
+.prev{
+    background-color: #e0e0e0;
+    color: #fff;
+}
+.next{
+    background-color: #3f5fdf;
+    color: #fff;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.circle::before{
+    width: 29.4px;
+    height:3px;
+    content: "";
+    background-color: var(--line-color, #e0e0e0);
+    position: absolute;
+    transition: background-color 0.4s ease;
+    left: -32.3px;
+}
+.circle:first-child::before {
+    display: none;  /* Hide line on first circle */
+}
